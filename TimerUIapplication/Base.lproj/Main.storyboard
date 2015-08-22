@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="mainpage" storyboardIdentifier="mainpageone" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6P-bv-5VX">
+                                <rect key="frame" x="16" y="28" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="HlH-mw-Q5B"/>
+                                </constraints>
+                                <state key="normal" title="Go To Next Page">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNextPageto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BI2-uv-AGj"/>
+                                    <segue destination="8FL-AV-hoJ" kind="show" identifier="goNextPage" id="WXa-F5-Goi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V6P-bv-5VX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ox8-jA-yCb"/>
+                            <constraint firstItem="V6P-bv-5VX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="XIb-GG-dCO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Next Page View Controller-->
+        <scene sceneID="foo-AO-3wH">
+            <objects>
+                <viewController id="8FL-AV-hoJ" customClass="NextPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zQb-Xl-r4X"/>
+                        <viewControllerLayoutGuide type="bottom" id="C0q-lv-4ju"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zmG-PO-idf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="aref abedjooy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuC-2I-rVM">
+                                <rect key="frame" x="16" y="20" width="233" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JWE-Mc-54K"/>
+                                    <constraint firstAttribute="width" constant="233" id="s0T-ep-x6q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After 10 sec, Session will be Expired!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-0A-s7O">
+                                <rect key="frame" x="158" y="230" width="284" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eHL-0A-s7O" secondAttribute="height" multiplier="568:287" id="mgz-t0-y3T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eHL-0A-s7O" secondAttribute="centerX" id="bIx-ix-z5r"/>
+                            <constraint firstItem="FuC-2I-rVM" firstAttribute="leading" secondItem="zmG-PO-idf" secondAttribute="leadingMargin" constant="81" id="gZs-m5-3NE"/>
+                            <constraint firstAttribute="centerY" secondItem="eHL-0A-s7O" secondAttribute="centerY" constant="-1.5" id="nA3-Qq-ESs"/>
+                            <constraint firstItem="FuC-2I-rVM" firstAttribute="top" secondItem="zQb-Xl-r4X" secondAttribute="bottom" constant="132" id="q7V-xH-D1m"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4K-Dp-0Dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="353"/>
+        </scene>
+    </scenes>
+</document>
